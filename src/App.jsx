@@ -290,7 +290,7 @@ const styles = `
 }
 
 .hero-h1 {
-  font-size: 42px;
+  font-size: clamp(28px, 5vw, 72px);
   font-weight: 700;
   line-height: 1.2;
   max-width: 820px;
@@ -298,6 +298,7 @@ const styles = `
   letter-spacing: -1px;
   word-break: keep-all;
   overflow-wrap: normal;
+  white-space: normal;
 }
 
 @media (min-width: 768px) {
@@ -2412,30 +2413,49 @@ function AuditModal({ onClose, onSuccess }) {
 }
 
 function AnimatedHeadline() {
-  const text1 = "Get More Leads From Google, ";
-  const text2 = "ChatGPT & AI Search";
-
-  const allLetters = [
-    ...text1.split('').map(ch => ({ char: ch, orange: false })),
-    { char: 'BREAK', orange: false },
-    ...text2.split('').map(ch => ({ char: ch, orange: true })),
-  ];
+  const words1 = ["Get", "More", "Leads", "From", "Google,"];
+  const words2 = ["ChatGPT", "&", "AI", "Search"];
 
   return (
-    <>
-      {allLetters.map((item, i) => {
-        if (item.char === 'BREAK') return <br key={i} />;
-        return (
+    <span style={{ display: 'block' }}>
+      {/* Line 1 - white words */}
+      <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
+        {words1.map((word, i) => (
           <span
             key={i}
-            className={`hero-letter${item.orange ? ' orange' : ''}${item.char === ' ' ? ' space' : ''}`}
-            style={{ animationDelay: `${0.3 + i * 0.03}s` }}
+            style={{
+              display: 'inline-block',
+              opacity: 0,
+              transform: 'translateY(30px)',
+              animation: `letterReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) ${0.3 + i * 0.1}s forwards`,
+              marginRight: '0.22em',
+            }}
           >
-            {item.char === ' ' ? '\u00A0' : item.char}
+            {word}
           </span>
-        );
-      })}
-    </>
+        ))}
+      </span>
+
+      {/* Line 2 - orange italic words */}
+      <span style={{ display: 'block', whiteSpace: 'nowrap' }}>
+        {words2.map((word, i) => (
+          <span
+            key={i}
+            style={{
+              display: 'inline-block',
+              opacity: 0,
+              transform: 'translateY(30px)',
+              animation: `letterReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) ${0.3 + (words1.length + i) * 0.1}s forwards`,
+              marginRight: i < words2.length - 1 ? '0.22em' : '0',
+              color: '#ff6600',
+              fontStyle: 'italic',
+            }}
+          >
+            {word}
+          </span>
+        ))}
+      </span>
+    </span>
   );
 }
 
