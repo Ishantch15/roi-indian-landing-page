@@ -17,6 +17,7 @@ import FAQSection from './components/FAQSection';
 import ProcessSection from './components/ProcessSection';
 import CTASection from './components/CTASection';
 import AuditModal from './components/AuditModal';
+import TestimonialsSection from './components/TestimonialsSection';
 import { ToastContainer } from './components/Toast';
 
 export default function ROISpectrum() {
@@ -85,6 +86,8 @@ export default function ROISpectrum() {
         <AEOSection />
 
         <CaseStudiesSection />
+
+        <TestimonialsSection />
 
         <ComparisonSection />
 
