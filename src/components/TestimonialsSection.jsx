@@ -126,7 +126,7 @@ export default function TestimonialsSection() {
                   width: 48, height: 48, borderRadius: '50%',
                   background: 'linear-gradient(135deg,#ff6600,#ff9933)',
                   color: 'white', display: 'flex', alignItems: 'center',
-                  justifyContent: 'center', fontWeight: 700, fontSize: 15,
+                  justifyContent: 'center', fontWeight: 700, fontSize: 16,
                   boxShadow: '0 4px 12px rgba(255,102,0,0.3)',
                 }}>
                   {t.initials}
@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
                 <p style={{ fontWeight: 700, fontSize: 16, color: '#1a1a1a', margin: 0, textAlign: 'left' }}>
                   {t.name}
                 </p>
-                <p style={{ fontSize: 15, color: '#444', lineHeight: 1.65, margin: 0, fontWeight: 400, textAlign: 'left' }}>
+                <p style={{ fontSize: 16, color: '#444', lineHeight: 1.65, margin: 0, fontWeight: 400, textAlign: 'left' }}>
                   {t.text}
                 </p>
               </div>
