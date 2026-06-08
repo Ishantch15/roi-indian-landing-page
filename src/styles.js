@@ -1319,6 +1319,11 @@ const styles = `
   .campaign-item h4 {
     font-weight: 600;
     margin-bottom: 4px;
+    gap: 16px;
+    color: rgba(255,255,255,0.9);
+    text-align: left;
+    line-height: 1.6;
+
   }
 
   .campaign-item p {
@@ -2334,9 +2339,6 @@ const styles = `
       font-size: 24px;
     }
 
-    .campaign-items {
-      grid-template-columns: 1fr;
-    }
 
     .results-box {
       padding: 28px 20px;
