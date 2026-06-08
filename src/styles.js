@@ -1458,8 +1458,8 @@ font-size: 16px;
     text-align: left;
     transition: background 0.3s;
     font-family: Arial, sans-serif;
+    gap: 16px;
   }
-
   .faq-toggle:hover {
     background: #f0f4ff;
   }
@@ -1490,13 +1490,13 @@ font-size: 16px;
   .faq-answer.open {
     max-height: 500px;
   }
-
-  .faq-answer-text {
+.faq-answer-text {
     padding: 24px 32px;
     color: #1a1a1a;
     line-height: 1.7;
     font-size: 16px;
     font-weight: 400;
+    text-align: left;
   }
 
   /* ===================== PROCESS SECTION ===================== */
@@ -2384,6 +2384,7 @@ text-align: left;
 
     .faq-question {
       font-size: 15px;
+      text-align: left;
     }
 
     .faq-toggle {
@@ -2393,6 +2394,7 @@ text-align: left;
     .faq-answer-text {
       padding: 16px 20px;
       font-size: 14px;
+      text-align: left;
     }
   }
 
