@@ -12,7 +12,11 @@ export default function AuditForm({ onSubmit }) {
     const e = {};
     if (!formData.name.trim()) e.name = 'Name is required';
     if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) e.email = 'Valid email is required';
-    if (!formData.phone.trim()) e.phone = 'Phone number is required';
+    if (!formData.phone.trim()) {
+      e.phone = 'Phone number is required';
+    } else if (formData.phone.replace(/\D/g, '').length !== 10) {
+      e.phone = 'Phone number must be exactly 10 digits';
+    }
     if (!formData.budget) e.budget = 'Please select a budget range';
     return e;
   };

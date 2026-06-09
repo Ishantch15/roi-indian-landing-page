@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import logo from '../assets/roilogo.jpg';
-import heroVideo from '../assets/video.mp4';
+import heroVideo from '../assets/thankyou.mp4';
 import { Search, DollarSign, Mail, Clock } from 'lucide-react';
 export default function ThankYou({ onGoHome }) {
   useEffect(() => {
@@ -51,12 +51,11 @@ export default function ThankYou({ onGoHome }) {
         }}>✓</div>
 
         <h1 style={{
-          fontSize: 'clamp(26px, 5vw, 40px)',
+          fontSize: 'clamp(17px, 3.5vw, 35px)',
           fontWeight: 700, lineHeight: 1.2, marginBottom: '16px',
           letterSpacing: '-0.5px', color: '#1a1a1a',
         }}>
-          Thank You for Choosing{' '}
-          <span style={{ color: '#ff6600', fontStyle: 'italic' }}>ROI Spectrum.</span>
+          Thank You for Choosing <span style={{ color: '#ff6600', fontStyle: 'italic' }}>ROI Spectrum.</span>
         </h1>
 
         <p style={{
@@ -188,7 +187,7 @@ export default function ThankYou({ onGoHome }) {
           Explore More Resources
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
 
           {/* Featured Case Study — expanded */}
           <div
@@ -344,12 +343,12 @@ export default function ThankYou({ onGoHome }) {
 
           {/* Right input */}
           <div style={{ flex: '1 1 260px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
               <input
                 type="email"
                 placeholder="your@company.com"
                 style={{
-                  flex: 1, padding: '13px 18px', borderRadius: '9999px',
+                  flex: '1 1 160px', minWidth: '0', padding: '13px 18px', borderRadius: '9999px',
                   background: 'rgba(255,255,255,0.08)', border: '2px solid rgba(255,255,255,0.12)',
                   color: 'white', fontSize: '14px', fontFamily: 'Arial, sans-serif',
                   outline: 'none', transition: 'border-color 0.2s',
@@ -363,7 +362,7 @@ export default function ThankYou({ onGoHome }) {
                 fontSize: '15px', fontWeight: 700, cursor: 'pointer',
                 fontFamily: 'Arial, sans-serif',
                 boxShadow: '0 4px 16px rgba(255,102,0,0.4)',
-                transition: 'all 0.2s', whiteSpace: 'nowrap',
+                transition: 'all 0.2s', whiteSpace: 'nowrap', flex: '1 1 auto',
               }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
