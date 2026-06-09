@@ -254,7 +254,7 @@ text-align: left;
     margin-bottom: 28px;
   }
 
-  .hero-badge {
+.hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -270,6 +270,7 @@ text-align: left;
     opacity: 0;
     transform: translateY(16px);
     animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    margin-bottom: 20px;
   }
 
   .hero-badge::before {
@@ -431,10 +432,7 @@ text-align: left;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow:
-      0 0 0 1px rgba(255,255,255,0.08),
-      0 40px 80px rgba(0,0,0,0.6),
-      0 8px 32px rgba(255,102,0,0.12);
+    box-shadow: none;
     opacity: 0;
     transform: translateY(60px) scale(0.97);
     animation: imgReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
@@ -1313,6 +1311,7 @@ text-align: left;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.5px;
+
   }
 
   .campaign-items {
@@ -1575,7 +1574,7 @@ font-size: 16px;
   .step-desc {
     font-size: 16px;
     color: #1a1a1a;
-    text-align: left;
+    text-align: center;
     font-weight: 400;
     line-height: 1.6;
   }

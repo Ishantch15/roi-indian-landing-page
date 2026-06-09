@@ -25,7 +25,13 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
               whiteSpace: 'nowrap',
               display: 'block',
             }}>
-              <span className="revenue-label-full">Revenue Driven For Our Clients</span>
+              <span className="revenue-label-full" style={{
+                fontSize: '12px',
+                fontWeight: '700',
+                color: '#1a1a1a',
+                fontFamily: 'Arial, sans-serif',
+
+              }}>Revenue Driven For Our Clients</span>
               <span className="revenue-label-short" style={{ display: 'none' }}>Revenue Driven</span>
             </span>
             <span style={{
@@ -54,9 +60,9 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
       </div>
 
       <div className={`roi-mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        {/* <nav style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
           <a href="#" className="active" style={{ padding: '12px 16px', borderRadius: '12px', background: 'rgba(255,102,0,0.06)', color: '#ff6600', fontWeight: 600, fontSize: '15px', textDecoration: 'none' }}>Solutions</a>
-        </nav>
+        </nav> */}
         <button className="roi-btn roi-btn-primary" style={{ width: '100%', marginTop: '16px', padding: '14px', fontSize: '15px' }} onClick={openModal}>Get Free Audit</button>
       </div>
     </header>

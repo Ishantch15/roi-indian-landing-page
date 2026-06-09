@@ -11,7 +11,7 @@ export default function CampaignSection() {
   ];
 
   const resultItems = [
-    { target: 2.5, decimals: 1, suffix: 'x', label: 'Avg. Lead Growth (Year 1)' },
+    { target: 4.5, decimals: 1, suffix: 'x', label: 'Avg. Lead Growth in 6 months' },
     { target: 3, prefix: 'Top ', suffix: '', label: 'AEO Visibility Positioning' },
     { target: 30, suffix: '%', label: 'Reduction in Paid CPA' },
     { target: 100, suffix: '%', label: 'Transparency Reporting' },
@@ -22,7 +22,7 @@ export default function CampaignSection() {
       <div className="campaign-container">
         <div className="campaign-grid">
           <div className="campaign-left">
-            <h2 className="campaign-h2">Everything Included in <br /><span className="italic-orange">Your Campaign</span></h2>
+            <h2 className="campaign-h2">Everything Included in Your Campaign</h2>
 
             <div className="campaign-items">
               {campaignItems.map((item, i) => (
