@@ -110,7 +110,8 @@ export default function AuditForm({ onSubmit }) {
           className="form-input"
           placeholder="+1 (555) 000-0000"
           value={formData.phone}
-          onChange={e => handleChange('phone', e.target.value)}
+          maxLength={10}
+          onChange={e => handleChange('phone', e.target.value.replace(/\D/g, '').slice(0, 10))}
           style={inputStyle('phone')}
         />
         {errors.phone && <span style={{ fontSize: '11px', color: '#ef4444', paddingLeft: '12px' }}>{errors.phone}</span>}
