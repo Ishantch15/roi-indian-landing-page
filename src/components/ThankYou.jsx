@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import logo from '../assets/roilogo.jpg';
 import heroVideo from '../assets/video.mp4';
-
+import { Search, DollarSign, Mail, Clock } from 'lucide-react';
 export default function ThankYou({ onGoHome }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -260,7 +260,7 @@ export default function ThankYou({ onGoHome }) {
                 width: '32px', height: '32px', borderRadius: '8px',
                 background: 'rgba(255,102,0,0.1)', display: 'flex', alignItems: 'center',
                 justifyContent: 'center', fontSize: '16px', marginBottom: '12px',
-              }}>🔍</div>
+              }}><Search size={16} color="#ff6600" /></div>
               <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px', color: '#1a1a1a' }}>
                 Competitor Intelligence Engine
               </h4>
@@ -285,7 +285,7 @@ export default function ThankYou({ onGoHome }) {
                 width: '32px', height: '32px', borderRadius: '8px',
                 background: 'rgba(255,102,0,0.1)', display: 'flex', alignItems: 'center',
                 justifyContent: 'center', fontSize: '16px', marginBottom: '12px',
-              }}>💰</div>
+              }}><DollarSign size={16} color="#ff6600" /></div>
               <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '6px', color: '#1a1a1a' }}>
                 Transparent SEO Pricing
               </h4>
@@ -389,7 +389,7 @@ export default function ThankYou({ onGoHome }) {
           <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
             {[
               {
-                icon: '✉',
+                icon: <Mail size={20} color="#ff6600" />,
                 label: 'Email Support',
                 content: <a href="mailto:ops@roispectrum.com" style={{ color: '#ff6600', fontSize: '15px', fontWeight: 600, textDecoration: 'none' }}
                   onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
@@ -397,7 +397,7 @@ export default function ThankYou({ onGoHome }) {
                 >ops@roispectrum.com</a>,
               },
               {
-                icon: '⏱',
+                icon: <Clock size={20} color="#ff6600" />,
                 label: 'Office Hours',
                 content: <p style={{ color: '#1a1a1a', fontSize: '15px', fontWeight: 600, margin: 0 }}>Mon–Fri: 09:00 – 18:00 EST</p>,
               },
