@@ -74,7 +74,7 @@ function MainSite({ onFormSuccess }) {
             src={certBadge}
             alt="Google Ads Search Certified"
             style={{
-              width: '72px', height: '72px', borderRadius: '50%',
+              width: '92px', height: '92px', borderRadius: '50%',
               boxShadow: '0 4px 24px rgba(0,0,0,0.3), 0 0 0 3px white, 0 0 0 5px rgba(0,0,0,0.1)',
               transition: 'transform 0.3s, box-shadow 0.3s',
             }}
