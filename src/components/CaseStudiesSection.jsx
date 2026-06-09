@@ -79,22 +79,6 @@ export default function CaseStudiesSection() {
               <h4 className="case-card-h4">{study.title}</h4>
               <p className="case-card-p">{study.desc}</p>
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: '12px',
-                padding: '16px',
-                background: '#faf8ff',
-                borderRadius: '12px',
-                border: '1px solid #f0eeff',
-              }}>
-                {/* {study.stats.map((s, j) => (
-                  <div key={j} style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '18px', fontWeight: 800, color: '#ff6600', lineHeight: 1.2 }}>{s.num}</div>
-                    <div style={{ fontSize: '10px', fontWeight: 600, color: '#999', marginTop: '4px', lineHeight: 1.4 }}>{s.label}</div>
-                  </div>
-                ))} */}
-              </div>
 
               <a
                 href={study.href}
