@@ -33,7 +33,7 @@ export default function ChallengesSection() {
       {/* Google I/O Video Section */}
       <section className="process">
         <div className="process-container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '60px', marginTop: '0', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'stretch', gap: '60px', marginTop: '0', flexWrap: 'wrap' }}>
 
             {/* Left: Text */}
             <div style={{ flex: '1 1 300px' }}>
@@ -62,7 +62,7 @@ export default function ChallengesSection() {
                 muted
                 loop
                 playsInline
-                style={{ width: '100%', display: 'block', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }}
               />
               <p style={{ fontSize: '11px', color: '#999', textAlign: 'right', margin: 0 }}>
                 Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog — Search at I/O 2026</a>
