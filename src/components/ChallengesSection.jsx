@@ -37,16 +37,24 @@ export default function ChallengesSection() {
 
             {/* Left: Text */}
             <div style={{ flex: '1 1 300px' }}>
-
-              <p style={{ fontSize: '30px', fontWeight: 700, color: '#1a1a1a', lineHeight: 1.2, textAlign: 'left', marginBottom: '20px' }}>
-                Google just announced the biggest overhaul to Search in over 25 years.
+              <p style={{
+                fontSize: 'clamp(24px, 3vw, 36px)',
+                fontWeight: 800,
+                color: '#1a1a1a',
+                lineHeight: 1.25,
+                textAlign: 'left',
+                margin: '0 0 12px 0',
+                letterSpacing: '-0.5px',
+              }}>
+                At Google I/O 2026, Google just announced the biggest overhaul to Search in over 25 years — pivoting from a traditional link-based search engine to an{' '}
+                <span style={{ color: '#ff6600', fontStyle: 'italic' }}>agentic, AI-powered system.</span>
               </p>
-              <p style={{ fontSize: '21px', fontWeight: 400, color: '#1a1a1a', lineHeight: 1.75, textAlign: 'left', margin: 0 }}>
-                At Google I/O 2026, the company announced the biggest overhaul to its search interface in over 25 years, pivoting from a traditional link-based search engine to an <span style={{ color: '#ff6600', fontWeight: 500 }}>agentic, AI-powered system.</span>
+              <p style={{ fontSize: '11px', color: '#999', textAlign: 'left', margin: 0 }}>
+                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog — Search at I/O 2026</a>
               </p>
             </div>
 
-            {/* Right: Browser Frame + Video */}
+            {/* Right: Video */}
             <div style={{ flex: '1 1 300px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <video
                 src={googleVideo}
@@ -57,7 +65,7 @@ export default function ChallengesSection() {
                 style={{ width: '100%', display: 'block', borderRadius: '20px', border: '1px solid rgba(255,102,0,0.15)' }}
               />
               <p style={{ fontSize: '11px', color: '#999', textAlign: 'right', margin: 0 }}>
-                Source: <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>YouTube</a>
+                Source: <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/#powerful-ai" target="_blank" rel="noopener noreferrer" style={{ color: '#999', textDecoration: 'underline' }}>Google Blog — Search at I/O 2026</a>
               </p>
             </div>
 

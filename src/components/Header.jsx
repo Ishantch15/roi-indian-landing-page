@@ -38,13 +38,11 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
             href="tel:+12362430590"
             style={{
               display: 'flex', alignItems: 'center', gap: '8px',
-              textDecoration: 'none', color: '#1a1a1a',
+              textDecoration: 'none', color: '#ff6600',
               fontFamily: 'Arial, sans-serif', fontWeight: 600, fontSize: '15px',
               padding: '10px 16px', borderRadius: '9999px',
-              border: '1.5px solid #eee', transition: 'all 0.3s', whiteSpace: 'nowrap',
+              border: '1.5px solid #ff6600', transition: 'all 0.3s', whiteSpace: 'nowrap',
             }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = '#ff6600'; e.currentTarget.style.color = '#ff6600'; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = '#eee'; e.currentTarget.style.color = '#1a1a1a'; }}
           >
             <Phone size={16} strokeWidth={2} />
             +1 (236) 243-0590
