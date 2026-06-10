@@ -98,7 +98,7 @@ export default function CaseStudiesSection() {
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 700, textAlign: 'left', marginBottom: '40px', color: '#1a1a1a' }}>
             Industries We've <span style={{ color: '#ff6600' }}>Transformed</span>
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+          <div className="industries-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
             {[
               { icon: <Code2 size={20} color="#ff6600" />, title: 'Technology & SaaS', desc: 'Turning complex solutions into findable, bookable demos' },
               { icon: <ShoppingCart size={20} color="#ff6600" />, title: 'E-commerce & Retail', desc: 'From browsers to buyers with conversion-focused SEO' },

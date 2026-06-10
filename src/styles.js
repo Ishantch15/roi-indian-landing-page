@@ -2582,7 +2582,17 @@ font-size: 48px;
     .footer-content { grid-template-columns: 1fr; gap: 28px; }
     .footer-bottom { text-align: center; }
   }
+@media (max-width: 1024px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 
+@media (max-width: 600px) {
+  .industries-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
   @media (max-width: 480px) {
     .toast-container { bottom: 16px; right: 12px; left: 12px; }
     .toast { min-width: unset; width: 100%; }
