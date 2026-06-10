@@ -278,7 +278,7 @@ const styles = `
     border-radius: 50%;
     background: #ff6600;
     display: inline-block;
-    animation: pulse 2s ease-in-out infinite;
+    // animation: pulse 2s ease-in-out infinite;
   }
 
   @keyframes pulse {
