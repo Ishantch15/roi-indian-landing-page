@@ -251,7 +251,11 @@ const styles = `
     flex-wrap: wrap;
     margin-bottom: 28px;
   }
-
+@media (max-width: 480px) {
+  .social-proof-text {
+    font-size: 11px !important;
+  }
+}
   .hero-badge {
     display: inline-flex;
     align-items: center;
