@@ -20,6 +20,13 @@ export default function HeroSection({ openModal }) {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const avatars = [
+    { flag: 'https://flagcdn.com/w40/us.png', alt: 'USA' },
+    { flag: 'https://flagcdn.com/w40/gb.png', alt: 'UK' },
+    { flag: 'https://flagcdn.com/w40/ae.png', alt: 'UAE' },
+    { flag: 'https://flagcdn.com/w40/ca.png', alt: 'Canada' },
+  ];
+
   return (
     <section className="hero">
       <div className="hero-inner">
@@ -34,9 +41,50 @@ export default function HeroSection({ openModal }) {
         <p className="hero-subtitle" style={{ opacity: 1, transform: 'none' }}>
           Traditional SEO is evolving. We help brands master Search Generative Experience and AI-driven discovery to drive high-intent conversion.
         </p>
-        <p className="section-h2-orange" style={{ transform: 'none', color: '#ff6600', marginBottom: '40px', opacity: 1, display: 'block', fontSize: '20px', fontWeight: 500 }}>
-          125+ Businesses Served In North America, Middle East And Europe
-        </p>
+
+        {/* Social proof pill */}
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '12px',
+          marginBottom: '40px',
+          background: 'rgba(255,102,0,0.08)',
+          border: '1px solid rgba(255,102,0,0.25)',
+          borderRadius: '9999px',
+          padding: '8px 20px 8px 8px',
+        }}>
+          {/* Stacked avatars */}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            {avatars.map((a, i) => (
+              <div key={i} style={{
+                width: '32px', height: '32px', borderRadius: '50%',
+                border: '2px solid #0f172a',
+                marginLeft: i === 0 ? 0 : '-8px',
+                zIndex: avatars.length - i,
+                position: 'relative',
+                overflow: 'hidden',
+                flexShrink: 0,
+              }}>
+                <img
+                  src={a.flag}
+                  alt={a.alt}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Text */}
+          <span style={{
+            fontSize: '17px',
+            fontWeight: 600,
+            color: '#ff9933',
+            fontFamily: 'Arial, sans-serif',
+            letterSpacing: '0.1px',
+          }}>
+            125+ Businesses Served In North America, Middle East &amp; Europe
+          </span>
+        </div>
 
         <div className="hero-buttons" style={{ opacity: 1, transform: 'none' }}>
           <button className="btn-main" onClick={openModal}>Start Your Free Audit ↗</button>
@@ -60,6 +108,6 @@ export default function HeroSection({ openModal }) {
           />
         </div>
       </div>
-    </section >
+    </section>
   );
 }
