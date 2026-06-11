@@ -34,8 +34,9 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
 
         {/* Desktop CTA */}
         <div className="roi-header-cta">
-          <a
-            href="tel:+12362430590"
+
+          <a href="tel:+12362430590"
+            onClick={() => window.gtag_report_conversion && window.gtag_report_conversion('tel:+12362430590')}
             style={{
               display: 'flex', alignItems: 'center', gap: '8px',
               textDecoration: 'none', color: '#ff6600',
@@ -60,8 +61,9 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
 
       {/* Mobile Menu */}
       <div className={`roi-mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <a
-          href="tel:+12362430590"
+
+        < a href="tel:+12362430590"
+          onClick={() => window.gtag_report_conversion && window.gtag_report_conversion('tel:+12362430590')}
           style={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             gap: '8px', textDecoration: 'none', color: '#ff6600',
@@ -80,7 +82,7 @@ export default function Header({ scrollY, mobileMenuOpen, setMobileMenuOpen, ope
         >
           Get Free Audit
         </button>
-      </div>
-    </header>
+      </div >
+    </header >
   );
 }

@@ -17,6 +17,24 @@
     gtag('config', 'AW-17089256923');
   </script>
 
+  <!-- Click to Call Conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17089256923/uMM-CI68-LwcENu75dQ_',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="./assets/roilogo.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
