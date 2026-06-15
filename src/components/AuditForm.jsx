@@ -108,7 +108,7 @@ export default function AuditForm({ onSubmit }) {
         <input
           type="tel"
           className="form-input"
-          placeholder="+1 (555) 000-0000"
+          placeholder="+91 9876543210"
           value={formData.phone}
           maxLength={10}
           onChange={e => handleChange('phone', e.target.value.replace(/\D/g, '').slice(0, 10))}
