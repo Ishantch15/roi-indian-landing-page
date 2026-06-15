@@ -2600,6 +2600,12 @@ font-size: 48px;
     grid-template-columns: 1fr !important;
   }
 }
+  @media (min-width: 1025px) {
+  .cta-address-mobile { display: none; }
+}
+  @media (min-width: 1025px) {
+  .cta-address-mobile { display: none; }
+}
   @media (max-width: 480px) {
     .toast-container { bottom: 16px; right: 12px; left: 12px; }
     .toast { min-width: unset; width: 100%; }

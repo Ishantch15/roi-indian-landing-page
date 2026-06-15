@@ -35,6 +35,19 @@
     }
   </script>
 
+  <!-- Crisp Chat -->
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "ba725ced-d1ab-413c-937f-ac3d9fac5215";
+    (function () {
+      d = document;
+      s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/3.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,10 +56,6 @@
 
 <body>
   <div id="root"></div>
-
-  <!-- JivoChat Widget -->
-  <script src="//code.jivosite.com/widget/BMHIDtr1K8" async></script>
-
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

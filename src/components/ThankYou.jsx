@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import logo from '../assets/roilogo.jpg';
 import heroVideo from '../assets/thankyou.mp4';
 import adsCertified from '../assets/ads-certified.png';
-import { Mail, Clock } from 'lucide-react';
+import { Mail, Clock, MapPin } from 'lucide-react';
 export default function ThankYou({ onGoHome }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -289,15 +289,15 @@ export default function ThankYou({ onGoHome }) {
               {
                 icon: <Mail size={20} color="#ff6600" />,
                 label: 'Email Support',
-                content: <a href="mailto:ops@roispectrum.com" style={{ color: '#ff6600', fontSize: '15px', fontWeight: 600, textDecoration: 'none' }}
+                content: <a href="mailto:growth@roispectrum.com" style={{ color: '#ff6600', fontSize: '15px', fontWeight: 600, textDecoration: 'none' }}
                   onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'}
                   onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}
-                >ops@roispectrum.com</a>,
+                >growth@roispectrum.com</a>,
               },
               {
                 icon: <Clock size={20} color="#ff6600" />,
                 label: 'Office Hours',
-                content: <p style={{ color: '#1a1a1a', fontSize: '15px', fontWeight: 600, margin: 0 }}>Mon–Fri: 09:00 – 18:00 EST</p>,
+                content: <p style={{ color: '#1a1a1a', fontSize: '15px', fontWeight: 600, margin: 0 }}>Mon–Fri: 9:00AM – 6:00PM IST</p>,
               },
             ].map((item, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
@@ -315,6 +315,25 @@ export default function ThankYou({ onGoHome }) {
                 </div>
               </div>
             ))}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', marginTop: '24px', paddingTop: '24px', borderTop: '1px solid #eee' }}>
+            <div style={{
+              width: '44px', height: '44px', borderRadius: '50%',
+              background: 'rgba(255,102,0,0.1)', border: '1px solid rgba(255,102,0,0.2)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '18px',
+            }}><MapPin
+                size={16}
+                color="#ff6600"
+                style={{ flexShrink: 0, marginTop: '2px' }}
+              /> </div>
+            <div style={{ textAlign: 'left' }}>
+              <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#999', marginBottom: '5px' }}>
+                Office Address
+              </p>
+              <p style={{ color: '#1a1a1a', fontSize: '14px', fontWeight: 500, margin: 0, lineHeight: 1.6 }}>
+                A-21, 1st Floor, Block A, Sector 67,<br />Noida, Uttar Pradesh, 201301
+              </p>
+            </div>
           </div>
         </div>
       </section>
